@@ -14,6 +14,10 @@ app.use(express.json());
 app.use('/api/payment', paymentRoutes);
 
 // Server start
+app.get('/', (req, res) => {
+  res.send('Backend is live');
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
